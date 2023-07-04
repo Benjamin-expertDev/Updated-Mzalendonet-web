@@ -1,0 +1,98 @@
+/*=================== 
+18. Blog Details
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/variables' as *;
+.ba-blog-details {
+    &-wrapper {
+        & blockquote {
+            background-color: #F4F4F4;
+        }
+    }
+    &-social-box {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+        padding-bottom: 7px;
+        @media #{$xs} {
+            padding: 20px 0;
+        }
+    }
+    &-comment-count {
+        & i {
+            font-size: 15px;
+            color: var(--clr-theme-primary);
+        }
+        & span {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+    &-social-icons {
+        & a {
+            margin-right: 10px;
+            font-size: 20px;
+            vertical-align: middle;
+            &:hover {
+                color: var(--clr-theme-primary);
+            }
+        }
+        & h6 {
+            display: inline-block;
+            margin-right: 15px;
+            & i {
+                display: inline-block;
+                font-size: 20px;
+            }
+        }
+    }
+    &-list-wrap {
+        & ul {
+            & li {
+                list-style: none;
+                margin-bottom: 12px;
+                & i {
+                    font-size: 20px;
+                    padding-right: 15px;
+                }
+                & span {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: var(--clr-body-heading);
+                    display: inline-block;
+                }
+                &.active {
+                    & i {
+                        color: var(--clr-theme-primary);
+                    }
+                }
+            }
+        }
+    }
+    &-title {
+        margin-bottom: 17px;
+        @media #{$lg} {
+            font-size: 42px;
+        }
+        @media #{$xs} {
+            font-size: 36px;
+        }
+        &-inner {
+            margin-bottom: 8px;
+        }
+    }
+    &-img {
+        margin-bottom: 30px;
+        & img {
+            border-radius: 5px;
+        }
+    }
+}
+@media #{$xl} {
+    .ba-blog-details-list-wrap.pt-20 {
+        padding-top: 0;
+    }
+    .ba-blog-sidebar-widget-wrapper.pl-50 {
+        padding-left: 30px;
+    }
+}

@@ -1,0 +1,168 @@
+/*=================== 
+13. Testimonial
+******************************************************* 
+*************************************************************** */
+@use "../abstracts/variables" as *;
+.testimonial-area {
+    @media #{$md, $sm, $c-xs, $c-xxs} {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+}
+.ba-testimonial {
+    &-2 {
+        &-box {
+            padding: 50px 50px;
+            border-radius: 10px;
+            background: #f9f9f9;
+            position: relative;
+            @media #{$lg} {
+                padding: 35px 35px;
+            }
+            @media #{$xs} {
+                padding: 30px 30px;
+            }
+            &::before {
+                position: absolute;
+                right: 35px;
+                top: 25px;
+                content: "\f10d";
+                font-family: "Font awesome 5 pro";
+                color: var(--clr-theme-primary);
+                font-size: 45px;
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+        &-content {
+            & p {
+                margin-bottom: 0;
+            }
+        }
+        &-author-wrapper {
+            display: flex;
+            align-items: center;
+            grid-gap: 0 20px;
+            &.mb-30 {
+                @media #{$xs} {
+                    margin-bottom: 15px;
+                }
+            }
+            & .image {
+                & img {
+                    max-width: 80px;
+                    max-height: 80px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            & .content {
+                & .title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &-boxed {
+        &-single {
+            background: #f9f9f9;
+            border-radius: 4px;
+            padding: 50px 34px;
+            position: relative;
+            @media #{$md} {
+                padding: 40px 30px;
+            }
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 3px;
+                border-radius: 50%;
+                background-image: url(../img/bg/line.png);
+                content: "";
+            }
+            & .icon {
+                margin-bottom: 15px;
+                & i {
+                    font-size: 37px;
+                    color: #292930;
+                    font-weight: 700;
+                }
+            }
+            & .content {
+                & p {
+                    margin-bottom: 13px;
+                }
+                & .title {
+                    font-size: 24px;
+                    margin-bottom: 9px;
+                }
+                & .designation {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: var(--clr-theme-primary);
+                    display: block;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+/*--------------- INDEX-1 PAGE TESTIMONIAL STYLES---------------*/
+#testimonial-section {
+    @media #{$sm, $c-xs, $c-xxs} {
+        padding: 80px 0;
+    }
+}
+
+.single-testimonial {
+    padding: 20px;
+    background: var(--clr-common-white);
+    border-radius: 10px;
+}
+.swiper-slide-next,
+.swiper-slide-active {
+    .single-testimonial {
+        box-shadow: 0px 5px 65px 0px rgba(0, 0, 0, 0.09);
+    }
+}
+.testimonial-slider-container {
+    margin-right: -60px;
+}
+.testimonial-slider-container .mySwiper {
+    max-width: 100%;
+    padding: 55px 30px;
+    margin: -55px -30px;
+}
+
+.stars {
+    color: #ffa21d;
+    margin-bottom: 18px;
+}
+
+.testimonial-writer {
+    gap: 20px;
+    &__img {
+        width: 60px;
+        height: 60px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__name {
+        text-transform: capitalize;
+        color: var(--clr-common-black);
+        margin-bottom: 0;
+    }
+
+    &__label {
+        color: var(--clr-theme-primary);
+    }
+}

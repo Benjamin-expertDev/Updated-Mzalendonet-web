@@ -1,0 +1,126 @@
+/*=================== 
+16. Sidebar
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+.ba-sidebar {
+    &-info-content {
+        padding: 0 30px;
+    }
+    &-logo-action-wrapper {
+        padding: 20px 0px;
+        & .action {
+            & button {
+                background: transparent;
+                width: 42px;
+                height: 42px;
+                font-size: 17px;
+                color: var(--clr-theme-primary);
+                border: 1px solid var(--clr-theme-primary);
+                border-radius: 50%;
+                &:hover {
+                    background-color: var(--clr-theme-primary);
+                    color: var(--clr-common-white);
+                }
+            }
+        }
+    }
+    &-top {
+        & nav {
+            & button.nav-link {
+                background: var(--clr-common-white);
+                border-radius: 0;
+                width: 50%;
+                color: var(--clr-theme-primary);
+                border: 0;
+                font-weight: 600;
+                font-size: 16px;
+                text-transform: uppercase;
+                &.active {
+                    background-color: var(--clr-theme-primary);
+                    color: var(--clr-common-white);
+                }
+            }
+        }
+    }
+    &-area {
+        position: fixed;
+        right: -330px;
+        top: 0;
+        z-index: 9;
+        width: 320px;
+        @include transition(.3s);
+        height: 100%;
+        background: var(--clr-common-white);
+        &.active {
+            right: 0;
+        }
+    }
+}
+.mean-container {
+	.mean-nav {
+		> ul {
+            display: block !important;
+            overflow: hidden;
+		}
+		margin-top: 0;
+	}
+	a.meanmenu-reveal {
+		display: none;
+	}
+	.mean-bar {
+		padding: 0;
+	}
+}
+.ba-sidebar-navigation-main {
+	overflow: hidden;
+}
+.ba-sidebar-nav-content {
+	padding: 0 30px;
+}
+.mean-container .mean-nav {
+	float: none;
+	background: var(--clr-theme-primary);
+	margin-top: 0;
+    @media #{$md} {
+        margin-top: 0;
+    }
+}
+.mean-container a.meanmenu-reveal {
+    display: none !important;
+  }
+  .mean-container .mean-nav ul li a {
+    display: block;
+    float: left;
+    width: 90%;
+    padding: 10px 5%;
+    margin: 0;
+    text-align: left;
+    color: var(--clr-common-white);
+    border-top: 1px solid #ffffff80;
+    text-decoration: none;
+    text-transform: uppercase;;
+    &:hover {
+        background: #ffffff3d;
+    }
+}
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-common-black);
+    opacity: 0;
+    z-index: 9;
+    @include transition(.3s);
+    visibility: hidden;
+    &.active {
+        opacity: .5;
+        visibility: visible;
+    }
+}
+.header-1 #mobile-menu {
+	display: inline-block !important;
+}

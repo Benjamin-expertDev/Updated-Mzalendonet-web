@@ -1,0 +1,56 @@
+/*=================== 
+21. Video
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+.ba-video {
+    &-icon {
+        position: relative;
+        display: inline-block;
+        @include playHoverEffect;
+    }
+    &-icon-link {
+        width: 55px;
+        height: 55px;
+        background: var(--clr-common-white);
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        z-index: 9;
+        line-height: 55px;
+        color: var(--clr-theme-primary);
+        border-radius: 50%;
+        &:hover {
+            background-color: var(--clr-theme-primary);
+            color: var(--clr-common-white);
+        }
+    }
+    &-content {
+        &-subtitle {
+            font-weight: 500;
+        }
+        &-title {
+            @media #{$xl} {
+                font-size: 42px;
+            }
+            @media #{$md} {
+                font-size: 42px;
+            }
+            @media #{$xs} {
+                font-size: 30px;
+            }
+            @media #{$sm} {
+                font-size: 32px;
+            }
+            & br {
+                @media #{$md, $xs} {
+                    display: none;
+                }
+            }
+        }
+        & .ba-video-content-subtitle {
+            margin-bottom: 20px;
+        }
+    }
+}

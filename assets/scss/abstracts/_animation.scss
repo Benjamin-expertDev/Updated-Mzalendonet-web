@@ -1,0 +1,42 @@
+/*=================== 
+02. Animation
+******************************************************* 
+*************************************************************** */
+@keyframes play-scale-up {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.4) ;
+        opacity: 0;
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg) ;
+    }
+}
+
+@keyframes offer {
+    0% {
+        border-color: var(--clr-theme-primary);
+    }
+    25% {
+        border-color: #b7cc12;
+    }
+    50% {
+        border-color: #1bcc12;
+    }
+    75% {
+        border-color: #b312cc;
+    }
+    100% {
+        border-color: #ededed;
+    }
+}

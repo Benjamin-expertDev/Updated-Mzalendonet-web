@@ -1,0 +1,13 @@
+/* <<<<<<<    Declaration   >>>>>>>>> */
+:root {
+  /**
+    @color declaration
+    */
+  --clr-common-white: #fff;
+  --clr-common-black: #292930;
+  --clr-common-black-deep: #000;
+  --clr-body-heading: #292930;
+  --clr-body-text: #9399a9;
+  --clr-theme-primary: #e6004a;
+  --clr-bg-gray: #8a90a2;
+  --clr-bg-black: #212529; }

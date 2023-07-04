@@ -1,0 +1,121 @@
+/*=================== 
+09. CTA
+******************************************************* 
+*************************************************************** */
+@use "../abstracts/variables" as *;
+.ba-cta {
+    &-content-left {
+        & .title {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: var(--clr-common-white);
+            @media #{$xs} {
+                font-size: 28px;
+            }
+            & br {
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-content-right {
+        & img {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            @media #{$lg} {
+                max-width: 540px;
+            }
+        }
+    }
+}
+.service-area.pt-145 {
+    @media #{$lg, $md, $xs} {
+        padding-top: 110px;
+    }
+}
+
+/*--------------- INDEX-1 PAGE CTA/NEWSLETTER STYLES---------------*/
+#nws-section {
+    background-image: url(../img/bg/cta-2.jpg);
+
+    @media #{$lg} {
+        padding: 50px 0;
+    }
+
+    .row {
+        @media #{$md, $sm, $c-xs, $c-xxs} {
+            row-gap: 35px;
+        }
+    }
+}
+
+.nwsletter {
+    &-content {
+        column-gap: 30px;
+
+        @media #{$c-xxs} {
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    }
+
+    &-icon {
+
+        @media #{$c-xxs} {
+            width: 50px;
+        }
+    }
+
+    &-txt {
+        color: var(--clr-common-white);
+
+        @media #{$c-xxs} {
+            text-align: center;
+        }
+
+        h3 {
+            color: var(--clr-common-white);
+
+            @media #{$lg} {
+                font-size: 35px;
+            }
+
+            @media #{$sm, $c-xs} {
+                font-size: 30px;
+            }
+
+            @media #{$sm, $c-xxs} {
+                font-size: 25px;
+            }
+        }
+    }
+
+    &-form {
+        position: relative;
+    }
+
+    &-email {
+        width: 100%;
+        border: 0;
+        padding: 10px 130px 10px 20px;
+        border-radius: 5px;
+        height: 50px;
+    }
+
+    &-btn {
+        border: 0;
+        background: var(--clr-theme-primary);
+        color: var(--clr-common-white);
+        padding: 0 20px;
+        height: 40px;
+        border-radius: 5px;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        translate: 0% -50%;
+    }
+}

@@ -1,0 +1,127 @@
+// INDEX-1 PAGE TV SHOW/LIVE SPORTS
+@use "../abstracts/variables" as *;
+
+/*--------------- INDEX-1 PAGE TV SHOW/LIVE SPORTS STYLES---------------*/
+#liveTV-section {
+    text-align: center;
+
+    @media #{$sm, $c-xs, $c-xxs} {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: -8px;
+        margin-bottom: 13px;
+
+        @media #{$sm} {
+            font-size: 32px;
+        }
+
+        @media #{$c-xs} {
+            font-size: 30px;
+        }
+
+        @media #{$c-xxs} {
+            font-size: 25px;
+            margin-top: -5px;
+        }
+    }
+}
+
+.section-heading {
+    @media #{$sm, $c-xs, $c-xxs} {
+        margin-bottom: 41px;
+    }
+}
+
+.single-stream {
+    text-align: left;
+    margin-bottom: 22px;
+
+    @media #{$c-xs, $c-xxs} {
+        text-align: center;
+    }
+
+    &__img-container {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+
+        .stream-popup-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: var(--clr-common-white);
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+
+    &__img {
+        margin-bottom: 26px;
+    }
+
+    &__title {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 14px;
+
+        @media #{$c-xs} {
+            font-size: 22px;
+        }
+
+        @media #{$c-xxs} {
+            font-size: 20px;
+        }
+    }
+
+    &__btn {
+        text-transform: capitalize;
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--clr-theme-primary);
+        text-decoration: none;
+    }
+}
+
+.custom-btn {
+    background: var(--clr-common-white);
+    border: 1px solid var(--clr-theme-primary);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--clr-theme-primary);
+    height: 60px;
+    line-height: 57px;
+    padding: 0 60px;
+    font-size: 20px;
+    font-weight: 500;
+    display: inline-block;
+
+    &:hover {
+        background-color: var(--clr-theme-primary);
+        color: var(--clr-common-white);
+    }
+
+    @media #{$md, $sm} {
+        height: 40px;
+        line-height: 37px;
+        padding: 0 25px;
+        font-size: 16px;
+    }
+
+    @media #{$c-xs} {
+        height: 40px;
+        line-height: 37px;
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    @media #{$c-xxs} {
+        height: 35px;
+        line-height: 32px;
+        padding: 0px 15px;
+        font-size: 14px;
+    }
+}

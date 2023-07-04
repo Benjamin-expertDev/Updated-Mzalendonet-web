@@ -1,0 +1,20 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 25" width="26" height="25">
+	<title>02_home</title>
+	<defs>
+		<image  width="26" height="25" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAZCAMAAAAYAM5SAAAAAXNSR0IB2cksfwAAAWJQTFRFk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mpk5mp91/4NQAAAHZ0Uk5TAEbwRTjzUiX/IBrxLaEjD+su9z8y9mlVdt0bFgLYPmvJGA1ITZ4GIpeJ74tmseyHEcrX1s4Sn9r5s836VlPem+D07ur7zObn8tWPxrtsgHyu27Idfe2DnWRntwuWjlyi9TPfKDWpKq8nCgelUCzcOy/+pDem0JOipFIAAAFSSURBVHicnZHpO4JREMVPlhxCoRBlS1KUNbtQWbNn35fssvv/zfQ+IR5fzIdzz8zvvnPn3hcATHn5yImCQrNhisjiXFRiYanhysrxI6y06VJaIWKurMqW7Y5qoIa1YumUDnTUZVF9JV2Am0ADG4EmNn91a7GLeNgKL9vgY7vW/IFAh0tNp4zFIGwhoIvdgKuHvX3sFxLmADA4BA4DI6NQPgaM0y+2MCJjE5wAbJOST0W1VywuMi1bOwTJxzOzkofmFEVV5x3AgqAEsCiTYonLwAqXxMblxCDhjmvVI4VVrrm5LibJDWAzhi25knXbqs12yF1d91iPfR6gmIeSHbVqbTDzciYe61HywE496ISnomc65DnzRBM6dIpewHeRyqLLq2vRm1ttcKd3zUQGadzPpQ3zwMdc9MTnpOHCL6+5KP2W/PlzPxv+jv8hC/9E75Hv2QevKiq2afH9yAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+	</style>
+	<g id="choose yur area">
+		<g id="text">
+			<g id="speed area">
+				<g id="all text">
+					<g id="text">
+						<use id="internet" href="#img1" x="0" y="0"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

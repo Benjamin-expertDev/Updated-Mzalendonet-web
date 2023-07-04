@@ -1,0 +1,238 @@
+/*=================== 
+25. Contact
+******************************************************* 
+*************************************************************** */
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.ba-contact {
+    &-global-location-widget {
+        &.has-pos {
+            position: absolute;
+            left: 0;
+            top: 0;
+            position: relative;
+        }
+    }
+    &-map {
+        line-height: 1;
+        &-area {
+            &.has-ba-contact-overlay {
+                position: relative;
+            }
+        }
+        & iframe {
+            width: 100%;
+            height: 743px;
+            line-height: 1;
+        }
+    }
+    &-left-content {
+        &-list {
+            & ul {
+                & li {
+                    list-style: none;
+                    overflow: hidden;
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                    & .icon {
+                        width: 60px;
+                        height: 60px;
+                        font-size: 24px;
+                        float: left;
+                        margin-right: 20px;
+                        text-align: center;
+                        line-height: 60px;
+                        background: var(--clr-common-black);
+                        border-radius: 50%;
+                        color: var(--clr-common-white);
+                        @include transition(0.3s);
+                    }
+                    & .content {
+                        overflow: hidden;
+                        & .ba-contact-left-title {
+                            margin-bottom: 3px;
+                            & a {
+                                text-decoration: none;
+                                &:hover {
+                                    color: var(--clr-theme-primary);
+                                }
+                            }
+                        }
+                        & p {
+                            margin-bottom: 0;
+                        }
+                        & a {
+                            text-decoration: none;
+                            &:hover {
+                                color: var(--clr-theme-primary);
+                            }
+                        }
+                    }
+                    &:hover {
+                        & .icon {
+                            color: var(--clr-common-white);
+                            background-color: var(--clr-theme-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--------------- INDEX-1 PAGE CONTACT STYLES---------------*/
+#contact-section {
+    @media #{$md, $sm, $c-xs, $c-xxs} {
+        padding-top: 80px;
+    }
+}
+.conatct-section-bg {
+    border-radius: 5px;
+    box-shadow: 3.5px 6.062px 76px 0px rgba(0, 0, 0, 0.11);
+    background: var(--clr-common-white);
+    margin-bottom: -235px;
+
+    @media #{$md, $sm, $c-xs, $c-xxs} {
+        text-align: center;
+        margin-bottom: -275px;
+    }
+}
+
+.contact-form {
+    &__input-fields {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        row-gap: 45px;
+        margin-bottom: 50px;
+
+        @media #{$lg, $md, $sm, $c-xs, $c-xxs} {
+            column-gap: 20px;
+            row-gap: 25px;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        @media #{$c-xs, $c-xxs} {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 15px;
+        }
+
+        & > * {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                translate: 0 -50%;
+                width: 18px;
+                height: 18px;
+                font-family: "Font Awesome 5 Pro";
+                line-height: 16px;
+            }
+
+            &:focus-within {
+                &::after {
+                    color: var(--clr-theme-primary);
+                }
+            }
+        }
+    }
+}
+
+.input-field-container {
+    &-name {
+        &::after {
+            content: "\f007";
+        }
+    }
+
+    &-email {
+        &::after {
+            content: "\f2b6";
+        }
+    }
+
+    &-number {
+        &::after {
+            content: "\f879";
+        }
+    }
+
+    &-subject {
+        &::after {
+            content: "\f044";
+        }
+    }
+
+    &-message {
+        grid-area: 3 / 1 / auto / 3;
+
+        @media #{$c-xs, $c-xxs} {
+            grid-area: auto;
+        }
+
+        &::after {
+            content: "\f4ad";
+            top: 15px;
+            translate: 0;
+        }
+    }
+}
+
+#contact-form {
+    &__name,
+    &__email,
+    &__number,
+    &__subject,
+    &__message {
+        border: none;
+        border-bottom: 1px solid #ebebeb;
+        padding: 12px 0;
+        width: 100%;
+        padding-right: 25px;
+        color: var(--clr-theme-primary);
+
+        &:focus {
+            border-color: var(--clr-theme-primary);
+        }
+    }
+
+    &__name {
+        &:focus {
+        }
+    }
+
+    &__message {
+        resize: none;
+    }
+}
+
+.contact-section-form-container {
+    padding: 60px 0px 60px 50px;
+
+    @media #{$md, $sm, $c-xs, $c-xxs} {
+        padding: 60px 30px 60px 30px;
+    }
+
+    h2 {
+        margin-bottom: 48px;
+    }
+}
+
+.conatct-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+    margin: 0;
+
+    @media #{$md, $sm, $c-xs, $c-xxs} {
+        position: static;
+        translate: 0;
+    }
+}

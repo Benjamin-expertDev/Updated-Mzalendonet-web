@@ -1,0 +1,58 @@
+/*=================== 
+11. Internet Item
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+.choose-internet {
+    @media #{$md, $sm, $c-xs, $c-xxs} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+.ba-choose {
+    &-internet-item {
+        text-decoration: none;
+        display: block;
+        padding: 34px 20px;
+        border-radius: 6px;
+        border: 1px solid transparent;
+        background-color: var(--clr-common-white);
+        & i {
+            font-size: 23.5px;
+            display: block;
+            text-align: center;
+            margin-bottom: 6px;
+            @include transition(.3s);
+        }
+        & .ba-count {
+            display: block;
+            font-size: 40px;
+            text-align: center;
+            color: var(--clr-common-black);
+            font-weight: 600;
+        }
+        & .ba-label {
+            font-size: 18px;
+            display: block;
+            text-align: center;
+        }
+        &:hover {
+            border-color: var(--clr-theme-primary);
+            & i {
+                color: var(--clr-theme-primary);
+            }
+        }
+        &.active {
+            border-color: var(--clr-theme-primary);
+            & i {
+                color: var(--clr-theme-primary);
+            }
+        }
+    }
+}
+.choose-internet-box-wrapper.pr-65 {
+    @media #{$xs} {
+        padding-right: 0;
+    }
+}

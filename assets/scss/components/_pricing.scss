@@ -1,0 +1,172 @@
+/*=================== 
+12. Pricing
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+.pricing-area {
+    @media #{$md, $sm, $c-xs, $c-xxs} {
+        padding-bottom: 60px;
+    }
+}
+.ba-pricing {
+    &-box {
+        padding: 50px 40px;
+        border-radius: 6px;
+        &-tab {
+            & nav {
+                & .nav-tabs {
+                    box-shadow: 0 2px 60px rgba(0,0,0,0.1);
+                    background: var(--clr-common-white);
+                    border-radius: 27.5px;
+                    padding: 10px;
+                    & button.nav-link {
+                        font-weight: 500;
+                        height: 42px;
+                        margin: 0 5px;
+                        padding: 0 20px;
+                        border: 0;
+                        border-radius: 50px;
+                        background-color: transparent;
+                        &.active {
+                            background-color: var(--clr-theme-primary);
+                            color: var(--clr-common-white);
+                        }
+                    }
+                }
+            }
+        }
+        @media #{$md} {
+            padding: 40px 30px;
+        }
+        @media #{$xs} {
+            padding: 40px 30px;
+        }
+        &-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--clr-common-white);
+            margin-bottom: 21px;
+        }
+        &-count {
+            font-size: 34px;
+            font-weight: 500;
+            color: var(--clr-common-white);
+            & span {
+                font-size: 20px;
+            }
+        }
+        &-list-wrap {
+            border-radius: 6px;
+            background-color: var(--clr-common-white);
+            padding: 40px 60px;
+            @media #{$xl} {
+                padding: 40px 40px;
+            }
+            @media #{$lg} {
+                padding: 40px 30px;
+            }
+            @media #{$md} {
+                padding: 40px 40px;
+            }
+            @media #{$xs} {
+                padding: 35px 25px;
+            }
+            position: relative;
+            overflow: hidden;
+            & > * {
+                position: relative;
+                z-index: 2;
+            }
+            &::after {
+                position: absolute;
+                @include transition(.3s);
+                right: 0;
+                top: 0;
+                width: 0;
+                height: 100%;
+                background-color: var(--clr-theme-primary);
+                content: "";
+            }
+            & ul {
+                text-align: left;
+                & li {
+                    list-style: none;
+                    @include transition(.3s);
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                    & i {
+                        @include transition(.3s);
+                        margin-right: 9px;
+                    }
+                    &.active {
+                        & i {
+                            color: var(--clr-theme-primary);
+                        }
+                    }
+                }
+            }
+        }
+        &-icons-wrap {
+            & .ba-pricing-box-icon {
+                display: inline-block;
+                width: 45px;
+                height: 45px;
+                text-align: center;
+                line-height: 45px;
+                border-radius: 50%;
+                border: 1px solid var(--clr-common-white);
+                margin: 0 10px;
+                &.active {
+                    background-color: var(--clr-theme-primary);
+                    border-color: transparent;
+                }
+                & i {
+                    color: var(--clr-common-white);
+                    font-size: 18px;
+                }
+            }
+        }
+        &.active {
+            & .ba-pricing-box-list-wrap {
+                &::after {
+                    width: 100%;
+                }
+                & .ba-submit-btn {
+                    background-color: var(--clr-common-white);
+                    &:hover {
+                        color: var(--clr-theme-primary);
+                    }
+                }
+                & ul {
+                    & li {
+                        color: var(--clr-common-white);
+                        &.active {
+                            & i {
+                                color: var(--clr-common-white);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:hover {
+            & .ba-submit-btn {
+                background-color: var(--clr-common-black);
+            }
+            & .ba-pricing-box-list-wrap {
+                & ul {
+                    & li,& li i {
+                        color: var(--clr-common-white);
+                    }
+                }
+                &::after {
+                    left: 0;
+                    right: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

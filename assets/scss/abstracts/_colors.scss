@@ -1,0 +1,31 @@
+$colors: (
+    common: (
+        white: #fff,
+        black: #292930,
+        black-deep: #000,
+    ),
+    body: (
+        heading: #292930,
+        text: #9399a9,
+    ),
+    theme: (
+        primary: #e6004a,
+    ),
+    bg: (
+        gray: #8a90a2,
+        black: #212529,
+    )
+);
+
+/* <<<<<<<    Declaration   >>>>>>>>> */
+
+:root {
+    /**
+    @color declaration
+    */
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades {
+            --clr-#{$color}-#{$shade}: #{$value};
+        }
+    }
+}

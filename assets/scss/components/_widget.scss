@@ -1,0 +1,118 @@
+/*=================== 
+23. Widget
+******************************************************* 
+*************************************************************** */
+// service widgets
+@use '../abstracts/mixins' as *;
+.ba-service {
+    &-widget {
+        background-color: #F5F5F5;
+        padding: 30px 20px;
+        border-radius: 5px;
+        &-form-search {
+            position: relative;
+            & input[type="search"] {
+                border: 0;
+                width: 100%;
+                height: 50px;
+                border-radius: 5px;
+                padding: 0 20px;
+                padding-right: 75px;
+            }
+            & button[type="submit"] {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 50px;
+                width: 55px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border: 0;
+                background: var(--clr-theme-primary);
+                color: var(--clr-common-white);
+                &:hover {
+                    background-color: var(--clr-common-black);
+                    color: var(--clr-common-white);
+                }
+            }
+        }
+        // search end
+        &-category-list {
+            &  ul {
+                & li {
+                    list-style: none;
+                    overflow: hidden;
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                    & a {
+                        display: block;
+                        font-size: 18px;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        text-decoration: none;
+                        background: var(--clr-common-white);
+                        color: var(--clr-bg-black);
+                        padding: 15px 20px;
+                        position: relative;
+                        & i {
+                            float: right;
+                        }
+                        &::before {
+                            position: absolute;
+                            left: 0;
+                            @include transition(.3s);
+                            top: 0;
+                            width: 3px;
+                            height: 100%;
+                            background-color: var(--clr-theme-primary);
+                            content: "";
+                        }
+                        & > * {
+                            position: relative;
+                            z-index: 1;
+                        }
+                        &:hover {
+                            color: var(--clr-common-white);
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // category end
+        &-info-box {
+            background: var(--clr-common-white);
+            padding: 25px 20px;
+        }
+        &-info-social-links {
+            & ul {
+                & li {
+                    list-style: none;
+                    &:not(:last-child) {
+                        & a {
+                            padding-bottom: 10px;
+                        }
+                    }
+                    & a {
+                        text-decoration: none;
+                        font-size: 17px;
+                        font-weight: 500;
+                        color: var(--clr-common-black);
+                        display: block;
+                        & i {
+                            display: inline-block;
+                            margin-right: 10px;
+                        }
+                        &:hover {
+                            color: var(--clr-theme-primary);
+                        }
+                    }
+                }
+            }
+        }
+        // info box end
+    }
+}

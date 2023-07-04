@@ -1,0 +1,17 @@
+/*=================== 
+22. Brand
+******************************************************* 
+*************************************************************** */
+.ba-brand {
+    &-active-wrapper {
+        box-shadow: 0 0 83px rgba(0,0,0,.18);
+        position: relative;
+        z-index: 9;
+        padding: 80px 60px;
+        border-radius: 4px;
+        &.has-space-top-reverce {
+            margin-top: -105px;
+            background-color: var(--clr-common-white);
+        }
+    }
+}

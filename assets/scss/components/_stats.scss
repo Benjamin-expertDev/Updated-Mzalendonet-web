@@ -1,0 +1,75 @@
+@use "../abstracts/variables" as *;
+
+/*--------------- INDEX-1 PAGE STATS STYLES---------------*/
+#stats-section {
+    padding-top: 415px;
+
+    .row {
+        @media #{$sm, $c-xs, $c-xxs} {
+            row-gap: 85px;
+        }
+    }
+
+    @media #{$c-xs, $c-xxs} {
+        padding-bottom: 65px;
+    }
+}
+
+.single-stat {
+    text-align: center;
+
+    &:hover {
+        .single-stat__number {
+            color: var(--clr-common-white);
+            &::before {
+                background: var(--clr-theme-primary);
+            }
+        }
+    }
+
+    &__number {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        color: var(--clr-theme-primary);
+        z-index: 1;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 75px;
+        transition: 0.4s ease;
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-radius: 10px;
+            top: -40px;
+            left: 50%;
+            width: 105px;
+            height: 105px;
+            background: #fff;
+            z-index: -1;
+            transform: rotate(45deg);
+            translate: -50% 0;
+            transition: 0.4s ease;
+        }
+
+        @media #{$c-xxs} {
+            margin-bottom: 65px;
+        }
+    }
+
+    &__label {
+        font-size: 26px;
+        font-weight: 600;
+        color: var(--clr-common-white);
+        display: block;
+
+        @media #{$c-xs} {
+            font-size: 24px;
+        }
+
+        @media #{$c-xxs} {
+            font-size: 16px;
+        }
+    }
+}

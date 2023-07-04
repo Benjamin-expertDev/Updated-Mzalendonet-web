@@ -1,0 +1,397 @@
+/*
+************
+*************************
+   Template Name:  Nafiab - Broadband & Internet HTML Template
+   Description: Nafiab. It is a modern Template and fits for all kind of internet, broadband service provier website.
+   Author: Website_Stock
+   Author URL: https://themeforest.net/user/website_stock
+   Version: 1.0
+-----------------------------------------------------------------------------------
+
+CSS INDEX
+=================== 
+01. Common
+02. Animation
+03. Button
+04. Header
+05. Hero
+06. feature-list
+07. about
+08. Section Title
+09. CTA
+10. Service
+11. Internet Item
+12. Pricing
+12. Movie
+13. Testimonial
+14. Blog
+15. Footer
+16. Sidebar
+17. Breadcrumb
+18. Blog Details
+19. Like Us
+22. Video
+21. Brand
+22. Faq
+23. Widget
+24. Team Details
+25. Contact
+******************************************************* 
+*************************************************************** */
+/*=================== 
+01. Common
+
+******************************************************* 
+*************************************************************** */
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./colors" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap");
+
+body {
+    font-family: $jost;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--clr-body-text);
+    font-size: 16px;
+}
+
+.img,
+img {
+    max-width: 100%;
+    @include transition(0.3s);
+}
+.f-left {
+    float: left;
+}
+.f-right {
+    float: right;
+}
+.fix {
+    overflow: hidden;
+}
+a,
+.button,
+button,
+input,
+textarea {
+    @include transition(0.3s);
+}
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+a:focus,
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+a,
+button {
+    color: inherit;
+    outline: medium none;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+    outline: 0;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--clr-body-heading);
+    line-height: 1.2;
+}
+h2,
+h1 {
+    font-weight: 700;
+}
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+}
+h1 {
+    font-size: 56px;
+}
+h2 {
+    font-size: 46px;
+}
+h3 {
+    font-size: 37px;
+}
+h4 {
+    font-size: 30px;
+}
+h5 {
+    font-size: 25px;
+}
+h6 {
+    font-size: 20px;
+}
+small {
+    font-size: 13px;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+p {
+    font-family: $jost;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--clr-body-text);
+}
+hr {
+    border-bottom: 1px solid #9399a9;
+    border-top: 0 none;
+    padding: 0;
+    opacity: 1;
+}
+label {
+    color: var(--clr-common-black);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+}
+*::-moz-selection {
+    background-color: var(--clr-theme-primary);
+    color: var(--clr-common-white);
+    text-shadow: none;
+}
+::-moz-selection {
+    background-color: var(--clr-theme-primary);
+    color: var(--clr-common-white);
+    text-shadow: none;
+}
+::selection {
+    background-color: var(--clr-theme-primary);
+    color: var(--clr-common-white);
+    text-shadow: none;
+}
+
+/* <<<<<<<    Input Placeholder   >>>>>>>>> */
+
+input {
+    @include placeholder {
+        color: var(--clr-body-text);
+        font-size: 16px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+}
+textarea {
+    @include placeholder {
+        color: var(--clr-body-text);
+        font-size: 16px;
+        opacity: 1;
+        transition: 0.5s;
+    }
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    opacity: 0;
+}
+
+/* <<<<<<<    Common Classes   >>>>>>>>> */
+
+.fix {
+    overflow: hidden;
+}
+.clear {
+    clear: both;
+}
+
+.p-rel {
+    position: relative;
+}
+
+.p-abs {
+    position: absolute;
+}
+.p-static {
+    position: static;
+}
+
+/* <<<<<<<    Overlay   >>>>>>>>> */
+
+[data-overlay] {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background-color: var(--clr-common-black-deep);
+    }
+}
+[data-overlay="3"]::before {
+    opacity: 0.3;
+}
+[data-overlay="4"]::before {
+    opacity: 0.4;
+}
+[data-overlay="5"]::before {
+    opacity: 0.5;
+}
+[data-overlay="6"]::before {
+    opacity: 0.6;
+}
+[data-overlay="7"]::before {
+    opacity: 0.7;
+}
+[data-overlay="8"]::before {
+    opacity: 0.8;
+}
+[data-overlay="9"]::before {
+    opacity: 0.9;
+}
+[data-overlay] > * {
+    position: relative;
+    z-index: 9;
+}
+/* <<<<<<<    Margin & Padding     >>>>>>>>> */
+
+@for $i from 1 through 40 {
+    .mt-#{5 * $i} {
+        margin-top: 5px * $i;
+    }
+}
+
+@for $i from 1 through 40 {
+    .mb-#{5 * $i} {
+        margin-bottom: 5px * $i;
+    }
+}
+
+@for $i from 1 through 40 {
+    .ml-#{5 * $i} {
+        margin-left: 5px * $i;
+    }
+}
+
+@for $i from 1 through 40 {
+    .mr-#{5 * $i} {
+        margin-right: 5px * $i;
+    }
+}
+
+@for $i from 1 through 40 {
+    .pt-#{5 * $i} {
+        padding-top: 5px * $i;
+    }
+}
+
+@for $i from 1 through 60 {
+    .pb-#{5 * $i} {
+        padding-bottom: 5px * $i;
+    }
+}
+
+@for $i from 1 through 40 {
+    .pl-#{5 * $i} {
+        padding-left: 5px * $i;
+    }
+}
+
+@for $i from 1 through 40 {
+    .pr-#{5 * $i} {
+        padding-right: 5px * $i;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 15px;
+        &.style-2 {
+            max-width: 1480px;
+        }
+    }
+}
+.bg-default {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.bg-theme {
+    background-color: var(--clr-theme-primary);
+}
+
+/**
+* other generic css
+*/
+.ba-rating {
+    & i {
+        color: #ffc107;
+        font-size: 15px;
+        font-weight: 400;
+        &.active {
+            font-weight: 700;
+        }
+    }
+}
+.white-text {
+    color: var(--clr-common-white);
+}
+.soft-white-text {
+    color: #f9f9f9;
+}
+blockquote {
+    background: #ffffff;
+    text-align: center;
+    padding: 30px 40px;
+    font-size: 18px;
+    @media #{$xs} {
+        padding: 30px 30px;
+    }
+}
+// extra space
+.pb-12 {
+    padding-bottom: 12px;
+}
+.ba-mb-0 {
+    margin-bottom: 0;
+}
+
+.circle-animation {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    opacity: 0.4;
+    animation: spin 25s linear infinite;
+    &.dir-top-left {
+        top: -150px;
+        left: -150px;
+    }
+}

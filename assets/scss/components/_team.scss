@@ -1,0 +1,119 @@
+/*=================== 
+20. Team
+******************************************************* 
+*************************************************************** */
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.team-area {
+
+    @media #{$c-xxs} {
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+}
+.ba-team {
+    &-card-box {
+        box-shadow: 0 3px 63px rgba(0, 0, 0, 0.07);
+        & .image {
+            overflow: hidden;
+            & img {
+                @include transition(0.3s);
+                width: 100%;
+            }
+        }
+        &:hover {
+            & .image {
+                & img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        & .content {
+            padding: 25px;
+            padding-bottom: 30px;
+            @media #{$xl} {
+                padding: 25px 20px;
+            }
+        }
+        &-social {
+            & a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 50%;
+                background: #f3f3f3;
+                text-align: center;
+                margin: 0 5px;
+                &:hover {
+                    background-color: var(--clr-theme-primary);
+                    color: var(--clr-common-white);
+                }
+            }
+            &.ba-has-social-left {
+                & a {
+                    margin: 0;
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        &-title {
+            margin-bottom: 8px;
+            @media #{$xl} {
+                font-size: 24px;
+            }
+            & a {
+                text-decoration: none;
+                &:hover {
+                    color: var(--clr-theme-primary);
+                }
+            }
+        }
+        &-designation {
+            text-decoration: none;
+            display: block;
+            margin-bottom: 18px;
+        }
+    }
+}
+
+//
+.single-member {
+    text-align: center;
+    box-shadow: 0px 0px 100px 0px #d9d9d9;
+
+    &__img {
+        margin-bottom: 12px;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+    }
+
+    &__role {
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+        padding-bottom: 15px;
+
+        a {
+            width: 40px;
+            height: 40px;
+            background: #f3f3f3;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}

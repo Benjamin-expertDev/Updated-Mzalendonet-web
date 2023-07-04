@@ -1,0 +1,117 @@
+/*=================== 
+12. Movie
+******************************************************* 
+*************************************************************** */
+@use "../abstracts/variables" as *;
+.movie-area {
+
+    @media #{$c-xxs} {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+}
+.ba-movie {
+    &-title {
+        font-size: 46px;
+        margin-bottom: 14px;
+        @media #{$xs} {
+            font-size: 28px;
+        }
+        & br {
+            @media #{$xl, $xs} {
+                display: none;
+            }
+        }
+    }
+    &-content {
+        &.pr-185 {
+            @media #{$xl} {
+                padding-right: 100px;
+            }
+            @media #{$lg, $xs} {
+                padding-right: 0;
+            }
+        }
+        & p {
+            margin-bottom: 32px;
+        }
+    }
+    &-price {
+        font-size: 28px;
+        font-weight: 500;
+        color: var(--clr-theme-primary);
+        &-service-duration-wrap {
+            & .ba-movie-price {
+                display: inline-block;
+                border-right: 2px solid #e6e6e6;
+                padding-right: 13px;
+                margin-right: 12px;
+                margin-bottom: 0;
+                @media #{$xs} {
+                    margin-right: 0;
+                    padding-right: 0;
+                    margin-bottom: 0;
+                    padding-bottom: 20px;
+                    display: block;
+                }
+            }
+            & .ba-movie-service-duration {
+                display: inline-block;
+            }
+        }
+        & span {
+            font-size: 18px;
+            color: var(--clr-body-text);
+        }
+    }
+    &-service-duration {
+        & i {
+            font-size: 32px;
+            color: var(--clr-theme-primary);
+            margin-right: 10px;
+        }
+        & span {
+            font-weight: 500;
+            color: var(--clr-theme-primary);
+        }
+    }
+}
+
+/*--------------- INDEX-1 PAGE MOVIE STYLES---------------*/
+.movie-content {
+    &__title,
+    &__txt,
+    &__price,
+    &__price span,
+    &__duration i,
+    &__duration span {
+        color: var(--clr-common-white);
+    }
+}
+.ba-movie-price-service-duration-wrap .movie-content__price {
+    @media #{$sm, $c-xs, $c-xxs} {
+        border: none;
+    }
+}
+
+.movie-section {
+    &__content {
+        @media #{$md } {
+            text-align: center;
+            padding: 0;
+            margin: 0 90px;
+        }
+
+        @media #{$sm, $c-xs, $c-xxs} {
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    &__play-btn.has-pos {
+        @media #{$md, $sm, $c-xs, $c-xxs} {
+            top: -20px;
+            transform: translate(-50%, 0);
+        }
+    }
+}

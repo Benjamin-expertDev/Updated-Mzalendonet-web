@@ -1,0 +1,121 @@
+/*=================== 
+19. Like Us
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/variables' as *;
+.ba-like {
+    &-us-2 {
+        &-image-left {
+            & img {
+                width: 100%;
+            }
+        }
+    }
+    &-content-space {
+        &.pl-50 {
+            @media #{$xl} {
+                padding-left: 30px;
+            }
+            @media #{$lg, $md, $xs} {
+                padding-left: 0;
+            }
+        }
+    }
+    &-us-content {
+        @media #{$lg, $md, $xs} {
+            position: relative;
+            z-index: 1;
+        }
+        & br {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
+    &-us-title {
+        @media #{$xl, $md} {
+            font-size: 42px;
+        }
+        @media #{$xs} {
+            font-size: 32px;
+        }
+    }
+    &-us-section-img-50 {
+        max-width: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        @media #{$lg, $md, $xs} {
+            max-width: 100%;
+            width: 100%;
+        }
+        & img {
+            height: 100%;
+            object-fit: cover;
+            @media #{$lg, $md, $xs} {
+                width: 100%;
+                filter: brightness(0.25);
+            }
+        }
+    }
+    &-list {
+        &-wrapper {
+            &.pr-185 {
+                @media #{$xl} {
+                    padding-right: 0;
+                }
+                @media #{$md} {
+                    padding-right: 95px;
+                }
+                @media #{$xs} {
+                    padding-right: 0;
+                }
+            }
+            &  ul {
+                & li {
+                    list-style: none;
+                    overflow: hidden;
+                    margin-bottom: 35px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    & .icon {
+                        float: left;
+                        & i {
+                            font-size: 38px;
+                        }
+                    }
+                    & .content {
+                        overflow: hidden;
+                        & .title {
+                            margin-bottom: 13px;
+                        }
+                        & p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.has-like-us-2-primary-shape {
+    position: relative;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: var(--clr-theme-primary);
+        height: 100%;
+        width: 36.63%;
+        content: "";
+        @media #{$lg, $md, $xs} {
+            display: none;
+        }
+    }
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
+}

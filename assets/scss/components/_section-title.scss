@@ -1,0 +1,59 @@
+/*=================== 
+08. Section Title
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/variables' as *;
+.ba-section {
+    &-subtitle {
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--clr-theme-primary);
+        margin-bottom: 15px;
+    }
+    &-title {
+        font-size: 46px;
+        font-weight: 600;
+        margin-bottom: 0;
+        @media #{$xl} {
+            font-size: 42px;
+            margin-top: -6px;
+        }
+        @media #{$md} {
+            font-size: 42px;
+            margin-top: -6px;
+        }
+        @media #{$xs} {
+            font-size: 32px;
+        }
+        @media #{$c-xxs} {
+            font-size: 25px;
+        }
+        & br {
+            @media #{$xs, $lg} {
+                display: none;
+            }
+        }
+        &-2 {
+            position: relative;
+            padding-bottom: 16px;
+            &::after {
+                position: absolute;
+                bottom: 0;
+                height: 2px;
+                width: 90px;
+                background: var(--clr-theme-primary);
+                content: "";
+                left: 0;
+            }
+        }
+        &-wrapper {
+            & p {
+                & br {
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

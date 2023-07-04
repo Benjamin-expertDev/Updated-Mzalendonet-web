@@ -1,0 +1,107 @@
+/*=================== 
+24. Team Details
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/variables' as *;
+.ba-team-details {
+    &-input-wrap {
+        & input[type="text"], & input[type="email"], & textarea {
+            width: 100%;
+            height: 50px;
+            padding: 0 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+        & textarea {
+            height: 135px;
+            padding: 11px 15px;
+        }
+    }
+    &-form {
+        &-title {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+    }
+    &-info-title {
+        margin-bottom: 23px;
+    }
+    &-skill-progress {
+        &-wrapper {
+            & .ba-team-details-skill-progress-item {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &-item {
+            overflow: hidden;
+            & .ba-content {
+                padding-bottom: 10px;
+            }
+            & .progress {
+                height: 7px;
+                border-radius: 3.5px;
+                & .progress-bar {
+                    background-color: var(--clr-theme-primary);
+                }
+            }
+            & .label {
+                font-weight: 500;
+            }
+            & .value {
+                float: right;
+            }
+        }
+        &-title {
+            margin-bottom: 25px;
+        }
+    }
+    &-author-img {
+        & img {
+            border-radius: 4px;
+            width: 100%;
+        }
+    }
+    &-author {
+        &-content {
+            &.pt-10 {
+                @media #{$xl, $md} {
+                    padding-top: 0;
+                }
+            }
+        }
+        &-name {
+            margin-bottom: 4px;
+        }
+        &-experience-list {
+            & ul {
+                & li {
+                    overflow: hidden;
+                    list-style: none;
+                    margin-bottom: 12px;
+                    & a {
+                        text-decoration: none;
+                        &:hover {
+                            color: var(--clr-theme-primary);
+                        }
+                    }
+                    & .label {
+                        min-width: 152px;
+                        float: left;
+                        font-weight: 500;
+                        @media #{$xs} {
+                            min-width: 122px;
+                        }
+                    }
+                    & .value {
+                        overflow: hidden;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

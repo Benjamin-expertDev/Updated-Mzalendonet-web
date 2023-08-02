@@ -5,7 +5,7 @@ document.getElementById("search-form").addEventListener("submit", function(event
     // Get the user's search query from the input field
     const searchQuery = document.getElementById("search-input").value;
 
-   
+   //site to changed
     const siteDomain = "http://www.mzalendoafrinet.co.ke/public/";
 
     // Construct the Google search URL with the site: operator

@@ -5,7 +5,7 @@ const postSchema = new mongoose.Schema({
   content: String,
   date: { type: Date, default: Date.now },
 });
-//const Post = mongoose.model('Post', postSchema);
+
 const Post = mongoose.model('Post', postSchema);
 
 module.exports = Post;

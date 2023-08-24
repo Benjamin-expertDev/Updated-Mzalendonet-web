@@ -16,7 +16,6 @@
     "backend": "nodemon backend/app.js",
     "start": "node app.js"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC"

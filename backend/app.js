@@ -2,8 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const dotenv = require('dotenv'); // Import dotenv
 
-require('dotenv').config(); // Load environment variables
+dotenv.config(); // Load environment variables
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,6 +17,12 @@ app.use(cors());
 mongoose.connect(process.env.DB_CONNECTION, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+})
+.then(() => {
+  console.log('Connected to MongoDB');
+})
+.catch((error) => {
+  console.error('Error connecting to MongoDB:', error);
 });
 
 // Routes

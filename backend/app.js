@@ -31,7 +31,7 @@ app.use('/api', apiRoutes);
 
 // Root route
 app.get('/', (req, res) => {
-  res.send('https://updated-mzalendonet-web.vercel.app/');
+  res.send('Website under maintainance. Meanwhile you can browse oour services through this Link =>https://updated-mzalendonet-web.vercel.app/');
 });
 
 app.listen(PORT, () => {

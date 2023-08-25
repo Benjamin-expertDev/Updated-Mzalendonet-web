@@ -29,6 +29,11 @@ mongoose.connect(process.env.DB_CONNECTION, {
 const apiRoutes = require('./routes/api');
 app.use('/api', apiRoutes);
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('https://updated-mzalendonet-web.vercel.app/');
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

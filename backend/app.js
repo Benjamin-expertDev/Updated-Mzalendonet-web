@@ -13,6 +13,10 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Connect to MongoDB using environment variable
 mongoose.connect(process.env.DB_CONNECTION, {
   useNewUrlParser: true,
@@ -28,11 +32,6 @@ mongoose.connect(process.env.DB_CONNECTION, {
 // Routes
 const apiRoutes = require('./routes/api');
 app.use('/api', apiRoutes);
-
-// Root route
-app.get('/', (req, res) => {
-  res.send('Website under maintainance. Meanwhile you can browse oour services through this Link =>https://updated-mzalendonet-web.vercel.app/');
-});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

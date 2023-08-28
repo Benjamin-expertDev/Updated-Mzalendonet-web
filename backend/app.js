@@ -18,6 +18,11 @@ app.use(cors());
 app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public'))); // Use path.join with __dirname
 
+// Serve index.html at the root URL
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 // Connect to MongoDB using environment variable
 mongoose.connect(process.env.DB_CONNECTION, {
   useNewUrlParser: true,

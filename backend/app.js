@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path'); // Import the path module
 
 dotenv.config();
 
@@ -15,7 +16,7 @@ app.use(cors());
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))); // Use path.join with __dirname
 
 // Connect to MongoDB using environment variable
 mongoose.connect(process.env.DB_CONNECTION, {

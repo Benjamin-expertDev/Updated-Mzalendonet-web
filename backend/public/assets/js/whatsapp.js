@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     whatsappLink.href = "#"; 
 
     // Incase Mzalendo changes their phone no, change
-    const phoneNumber = "0748329740";
+    const phoneNumber = "+254748329740";
 
     
     const iconPath = "assets/img/icons8-whatsapp.gif";

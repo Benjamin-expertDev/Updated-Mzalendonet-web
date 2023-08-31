@@ -59,6 +59,12 @@ CSS INDEX
   --clr-bg-gray: #8a90a2;
   --clr-bg-black: #212529;
 }
+.whatsapp-widget {
+  position: fixed;
+  bottom: 5px;
+  right: 20px;
+  z-index: 1000;
+}
 
 body {
   font-family: "Jost", sans-serif;

@@ -6709,6 +6709,18 @@ blockquote {
 .contact-section-form-container h2 {
   margin-bottom: 48px;
 }
+.ba-submt-btn {
+  position: fixed;
+  top: 10px; 
+  right: 10px; 
+  background-color: #08f828; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 5px; 
+  text-decoration: none;
+  font-size: 16px; 
+}
 
 .conatct-img {
   position: absolute;

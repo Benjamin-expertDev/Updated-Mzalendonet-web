@@ -3883,30 +3883,30 @@ blockquote {
   }
 }
 
-/*--------------- INDEX-1 PAGE Package  STYLES---------------*/
+/*--------------- INDEX-1 PAGE package STYLES---------------*/
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 480px) and (max-width:575px), only screen and (max-width:479px) {
-  #Package -section {
+  #package-section {
     padding: 80px 0;
   }
 }
-#Package -section .section-title {
+#package-section .section-title {
   color: var(--clr-common-white);
   margin-bottom: 40px;
   color: var(--clr-common-white);
 }
 
-.Package -section__btns {
+.package-section__btns {
   display: flex;
   justify-content: center;
   gap: 30px;
   margin-bottom: 50px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 480px) and (max-width:575px), only screen and (max-width:479px) {
-  .Package -section__btns {
+  .package-section__btns {
     margin-bottom: 30px;
   }
 }
-.Package -section__btns .custom-btn {
+.package-section__btns .custom-btn {
   background: transparent;
   color: var(--clr-common-white);
   height: auto;
@@ -3916,11 +3916,11 @@ blockquote {
   place-items: center;
 }
 @media only screen and (max-width:479px) {
-  .Package -section__btns .custom-btn {
+  .package-section__btns .custom-btn {
     padding: 10px 20px;
   }
 }
-.Package -section__btns .custom-btn:hover {
+.package-section__btns .custom-btn:hover {
   background-color: var(--clr-theme-primary);
   color: var(--clr-common-white);
 }
@@ -3976,86 +3976,86 @@ blockquote {
   color: unset;
 }
 
-.Package -nav-btn__icon {
+.package-nav-btn__icon {
   margin-bottom: 12px;
 }
-.Package -nav-btn__title {
+.package-nav-btn__title {
   font-size: 40px;
   color: #292930;
   display: block;
   font-weight: 600;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .Package -nav-btn__title {
+  .package-nav-btn__title {
     font-size: 32px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 480px) and (max-width:575px) {
-  .Package -nav-btn__title {
+  .package-nav-btn__title {
     font-size: 30px;
   }
 }
 @media only screen and (max-width:479px) {
-  .Package -nav-btn__title {
+  .package-nav-btn__title {
     font-size: 28px;
   }
 }
 
-.Package -tabs {
+.package-tabs {
   padding: 0 11px;
 }
 
-.Package -details {
+.package-details {
   background-color: var(--clr-common-white);
   border-radius: 6px;
   padding: 30px 40px;
   text-align: left;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 480px) and (max-width:575px), only screen and (max-width:479px) {
-  .Package -details .row {
+  .package-details .row {
     row-gap: 25px;
   }
 }
-.Package -details__title {
+.package-details__title {
   margin-bottom: 13px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 480px) and (max-width:575px), only screen and (max-width:479px) {
-  .Package -details__title {
+  .package-details__title {
     text-align: center;
   }
 }
-.Package -details__txt {
+.package-details__txt {
   margin-bottom: 18px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 480px) and (max-width:575px), only screen and (max-width:479px) {
-  .Package -details__txt {
+  .package-details__txt {
     text-align: center;
   }
 }
-.Package -details__features-container {
+.package-details__features-container {
   margin-bottom: 40px;
   -moz-column-gap: 70px;
        column-gap: 70px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 480px) and (max-width:575px), only screen and (max-width:479px) {
-  .Package -details__features-container {
+  .package-details__features-container {
     justify-content: center;
   }
 }
 @media only screen and (min-width: 480px) and (max-width:575px) {
-  .Package -details__features-container {
+  .package-details__features-container {
     -moz-column-gap: 30px;
          column-gap: 30px;
   }
 }
 @media only screen and (max-width:479px) {
-  .Package -details__features-container {
+  .package-details__features-container {
     flex-wrap: wrap;
     row-gap: 25px;
     text-align: center;
   }
 }
-.Package -details__img {
+.package-details__img {
   display: block;
   margin: auto;
 }
@@ -4079,7 +4079,7 @@ blockquote {
   translate: 0 -50%;
   width: 20px;
   height: 20px;
-  background: url(../img/icons/check-Package .png) no-repeat center center;
+  background: url(../img/icons/check-package.png) no-repeat center center;
 }
 .single-pack-feature--colored {
   color: var(--clr-theme-primary);

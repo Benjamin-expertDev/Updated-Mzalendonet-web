@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 
-/*--------------- INDEX-1 PAGE PACKAGE STYLES---------------*/
-#package-section {
+/*--------------- INDEX-1 PAGE Package  STYLES---------------*/
+#Package -section {
     @media #{$sm, $c-xs, $c-xxs} {
         padding: 60px 0;
     }
@@ -14,7 +14,7 @@
     }
 }
 
-.package-section__btns {
+.Package -section__btns {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -88,12 +88,12 @@
     background-color: #f0f0f0;
     border-color: var(--clr-theme-primary);
     color: unset;
-    .package-nav-btn__title {
+    .Package -nav-btn__title {
         color: var(--clr-theme-primary);
     }
 }
 
-.package-tabs {
+.Package -tabs {
     .nav-link {
         @media #{$c-xxs} {
             padding: 5px 24px;
@@ -101,7 +101,7 @@
     }
 }
 
-.package-nav-btn {
+.Package -nav-btn {
     &__icon {
         margin-bottom: 9px;
 
@@ -140,14 +140,14 @@
     }
 }
 
-.package-tabs {
+.Package -tabs {
     padding: 0 11px;
     @media #{$c-xxs} {
         padding: 0;
     }
 }
 
-.package-details {
+.Package -details {
     background-color: var(--clr-common-white);
     border-radius: 6px;
     padding: 30px 40px;
@@ -225,7 +225,7 @@
                 translate: 0 -50%;
                 width: 20px;
                 height: 20px;
-                background: url(../img/icons/check-package.png) no-repeat center center;
+                background: url(../img/icons/check-Package .png) no-repeat center center;
             }
         }
     }

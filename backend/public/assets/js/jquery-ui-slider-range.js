@@ -3518,7 +3518,7 @@ color.fn.parse.prototype = color.fn;
 
 // Hsla conversions adapted from:
 
-// https://code.google.com/p/maashaack/source/browse/packages/graphics/trunk/src/graphics/colors/HUE2RGB.as?r=5021
+// https://code.google.com/p/maashaack/source/browse/Package s/graphics/trunk/src/graphics/colors/HUE2RGB.as?r=5021
 
 
 

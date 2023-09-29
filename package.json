@@ -8,7 +8,7 @@
     "mongoose": "^7.4.2"
   },
   "name": "web",
-  "description": "web  This is a website for a changed profile from Mzalendo Afrinet FIber to Mzalendonet FIber",
+  "description": "web  This is a website for a changed profile from Mzalendo Afrinet FIber to Mzalendo Fiber",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
